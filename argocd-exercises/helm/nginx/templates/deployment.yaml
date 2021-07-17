@@ -21,7 +21,7 @@ spec:
         app: nginx-deployment
     spec:
       containers:
-      - image: {{ .Values.image.repository }}/{{ .Values.image.tag }}
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: nginx-deployment
         resources:
