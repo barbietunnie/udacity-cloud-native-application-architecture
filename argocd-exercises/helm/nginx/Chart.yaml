@@ -1,0 +1,9 @@
+apiVersion: v1
+name: nginx-deployment
+description: Install NGINX deployment
+keywords:
+- nginx
+version: 1.0.0
+maintainers:
+- name: B.A
+  email: some-email@xyz.com
