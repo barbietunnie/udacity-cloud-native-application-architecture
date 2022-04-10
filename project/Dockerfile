@@ -3,7 +3,7 @@ FROM python:3.8-slim-buster
 
 LABEL mainitainer="Babatunde Adeyemi"
 
-COPY ./project/techtrends/ /app
+COPY ./techtrends /app
 WORKDIR /app
 
 RUN pip install -r requirements.txt
