@@ -83,7 +83,7 @@ def create():
             connection.commit()
             connection.close()
 
-            logging.info("Article '%s' was created!", content)
+            logging.info("Article '%s' was created!", title)
             return redirect(url_for('index'))
 
     return render_template('create.html')
