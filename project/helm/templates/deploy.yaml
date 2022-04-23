@@ -20,7 +20,6 @@ spec:
       - image: {{ .Values.image.reporsitory }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
-        resources: {{ toYaml .Values.resources | indent 12}}
         ports:
           - containerPort: {{ .Values.containerPort }}
         livenessProbe:
@@ -31,4 +30,5 @@ spec:
           httpGet:
             path: /healthz
             port: {{ .Values.containerPort }}
-status: {}
+        resources:
+{{ toYaml .Values.resources | indent 12}}
